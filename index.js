@@ -3,6 +3,7 @@ const axios = require('axios');
 const cors = require('cors');
 const app = express();
 const port = 8080;
+require('dotenv').config();
 
 // Middleware to parse JSON bodies
 app.use(cors());
@@ -30,7 +31,7 @@ app.post('/create-web-call', async (req, res) => {
             payload,
             {
                 headers: {
-                    'Authorization': 'Bearer ' + API_KEY, // Replace with your actual Bearer token
+                    'Authorization': 'Bearer ' + process.env.API_KEY, // Replace with your actual Bearer token
                     'Content-Type': 'application/json',
                 },
             }
