@@ -30,7 +30,7 @@ app.post('/create-web-call', async (req, res) => {
             payload,
             {
                 headers: {
-                    'Authorization': 'Bearer key_e656d0a1b6e3978908c9bbdefb5f', // Replace with your actual Bearer token
+                    'Authorization': 'Bearer ' + API_KEY, // Replace with your actual Bearer token
                     'Content-Type': 'application/json',
                 },
             }
